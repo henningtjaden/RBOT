@@ -28,14 +28,12 @@ RBOT depends on (recent versions of) the following software libraries:
 * OpenGL
 * Qt
 
-**It must be run from the root directory (that contains the *src* folder) otherwise the relative paths to the model and the shaders will be wrong.**
-
 The code was developed and tested under macOS. It should, however, also run on Windows and Linux systems with (probably) a few minor changes required. Nothing is plattform specific by design.
 
 
 # How To Use
 
-The general usage of the algorithm is demonstrated in a small example command line application provided in `main.cpp`. Here the pose of a single 3D model is refined with respect to a given example image. The extension to actual pose tracking and using multiple objects should be straight foward based on this example. Simply replace the example image with the live feed from a camera or a video and add your own 3D models instead.
+The general usage of the algorithm is demonstrated in a small example command line application provided in `main.cpp`.  **It must be run from the root directory (that contains the *src* folder) otherwise the relative paths to the model and the shaders will be wrong.** Here the pose of a single 3D model is refined with respect to a given example image. The extension to actual pose tracking and using multiple objects should be straight foward based on this example. Simply replace the example image with the live feed from a camera or a video and add your own 3D models instead.
 
 For the best performance when using your own 3D models, please **ensure that each 3D model consists of a maximum of around 4000 - 7000 vertices and is equally sampled across the visible surface**. This can be enforced by using a 3D mesh manipulation software such as MeshLab (http://www.meshlab.net/) or OpenFlipper (https://www.openflipper.org/).
 
